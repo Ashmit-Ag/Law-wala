@@ -1,0 +1,152 @@
+import { timeStamp } from "console";
+
+const { default: mongoose } = require("mongoose");
+
+//if advocate or judge will adding the client
+const schema=new mongoose.Schema({
+    clientname:{
+        type:String,
+        required:true
+    },
+    clientnumber:{
+        type:String,
+        required:true
+ },
+ clientaddress:{
+        type:String,
+        required:true
+    },clientemail:{
+        type:String,
+        required:true
+    },clientstate:{
+        type:String,
+        required:true
+    },clientcity:{
+        type:String,
+        required:true
+    },clientadvocate:{
+        type:String,
+        required:true
+    },clietnadvocatenumber:{
+        type:String,
+        required:true
+    },clietnadvocateemail:{
+        type:String,
+        required:true
+    },clientid:{
+        type:String,
+        required:false
+    },advocateid:{
+        type:String,
+        required:false
+    },respondentname:{
+        type:String,
+        required:true
+    },respondentaddress:{
+        type:String,
+        required:true
+    },respondentemail:{
+        type:String,
+        required:true
+    },respondentstate:{
+        type:String,
+        required:true
+    },respondentcity:{
+        type:String,
+        required:true
+    },respondentadvocate:{
+        type:String,
+        required:true
+    },respondentadvocatenumber:{
+        type:String,
+        required:true
+    },respondentid:{
+        type:String,
+        required:false
+    },respondentadvocateid:{
+        type:String,
+        required:false
+    },casetype:{
+        type:String,
+        required:true
+    },
+    casestage:{
+        type:String,
+        required:true
+    },
+    act:{
+        type:String,
+        required:true
+    },
+    filingnumber:{
+        type:String,
+        required:true
+    },
+    registrationdate:{
+        type:String,
+        required:true
+    },
+    cnrnumber:{
+        type:String,
+        required:true
+    },
+    filinghearingdate:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:false
+    },
+    courttype:{
+        type:String,
+        required:true
+    },
+    casenumber:{
+        type:String,
+        required:true
+    },
+    registrationnumber:{
+        type:String,
+        required:true
+    },
+    court:{
+        type:String,
+        required:true
+    },
+    respondentnumber:{
+        type:String,
+        required:true
+    },
+    courtnumber:{
+        type:String,
+        required:true
+    },
+    judge:{
+        type:String,
+        required:true
+    },
+    adminid:{
+        type:String,
+        required:true
+    },
+    nexthearingdate:{
+        type:String,
+        required:false
+    },
+    hearingdates:{
+        type:Array,
+        required:false
+    },
+    overallconclusion:{
+        type:String,
+        required:false
+    },
+    
+  
+},
+{timeStamps:true})
+mongoose.models={}
+
+const casead=mongoose.model.casead ||  mongoose.model('casead',schema);
+export default casead;
